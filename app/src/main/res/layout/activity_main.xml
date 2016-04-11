@@ -15,8 +15,12 @@
         android:id="@+id/main_cv"
         />-->
 
-    <pengpeng.com.newsframe.PorterDuffView
+    <!--<pengpeng.com.newsframe.PorterDuffView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+    <pengpeng.com.newsframe.DisInView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        />
 
 </LinearLayout>
