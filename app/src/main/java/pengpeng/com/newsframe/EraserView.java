@@ -73,7 +73,7 @@ public class EraserView extends View
 		mCanvas = new Canvas(fgBitmap);
 		// 绘制画布背景为中性灰
 		mCanvas.drawColor(0xFF808080);
-		bgBitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.a4);
+		bgBitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.brithday);
 		bgBitmap = Bitmap.createScaledBitmap(bgBitmap,screenW,screenH,true);
 
 	}
