@@ -10,12 +10,13 @@ import android.util.AttributeSet;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 
 import pengpeng.com.newsframe.utils.MeasureUtil;
 /**
  * Created by Administrator on 2016/4/13.
  */
-public class MatrixImageView extends View
+public class MatrixImageView extends ImageView
 {
 	private static final int MODE_NONE = 0x00123;// 默认的触摸模式
 	private static final int MODE_DRAG = 0x00321;// 拖拽模式
@@ -92,22 +93,62 @@ public class MatrixImageView extends View
 					float dy = event.getY() - start.y;
 					currentMatrix.postTranslate(dx,dy);
 				}
-		}
+				 /*
+             * 两点触控拖放旋转
+             */
+				else if (mode == MODE_ZOOM && event.getPointerCount() == 2) {
+					float currentMove = calSpacing(event);
+					currentMatrix.set(savedMatrix);
+					/*
+                 * 指尖移动距离大于10F缩放
+                 */
+					if (currentMove > 10F) {
+						float scale = currentMove/preMove;
+						currentMatrix.postScale(scale,scale,mid.x,mid.y);
+					}
+					/*
+                 * 保持两点时旋转
+                 */
+					if (preEventCoor != null) {
+						rotate = calRotation(event);
+						float r = rotate - saveRotate;
+						currentMatrix.postRotate(r,getMeasuredWidth()/2,getMeasuredHeight()/2);
+						}
+					}
+					break;
+				}
+		setImageMatrix(currentMatrix);
 		return true;
 	}
 
-	private float calRotation(MotionEvent event)
-	{
-		return 0;
+	/**
+	 * 计算两个触摸点间的距离
+	 */
+	private float calSpacing(MotionEvent event) {
+		float x = event.getX(0) - event.getX(1);
+		float y = event.getY(0) - event.getY(1);
+		return (float) Math.sqrt(x * x + y * y);
 	}
 
-	private void calMidPoint(PointF mid, MotionEvent event)
-	{
-
+	/**
+	 * 计算两个触摸点的中点坐标
+	 */
+	private void calMidPoint(PointF point, MotionEvent event) {
+		float x = event.getX(0) + event.getX(1);
+		float y = event.getY(0) + event.getY(1);
+		point.set(x / 2, y / 2);
 	}
 
-	private float calSpacing(MotionEvent event)
-	{
-		return 0;
+	/**
+	 * 计算旋转角度
+	 *
+	 * @param 事件对象
+	 * @return 角度值
+	 */
+	private float calRotation(MotionEvent event) {
+		double deltaX = (event.getX(0) - event.getX(1));
+		double deltaY = (event.getY(0) - event.getY(1));
+		double radius = Math.atan2(deltaY, deltaX);
+		return (float) Math.toDegrees(radius);
 	}
 }
