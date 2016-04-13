@@ -61,6 +61,7 @@ public class MatrixImageView extends ImageView
 		switch(event.getAction()&MotionEvent.ACTION_MASK){
 			case MotionEvent.ACTION_DOWN:// 单点接触屏幕时
 				savedMatrix.set(currentMatrix);
+				start.set(event.getX(),event.getY());
 				mode = MODE_DRAG;
 				preEventCoor = null;
 				break;
