@@ -22,9 +22,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />-->
-    <pengpeng.com.newsframe.MatrixImageView
+   <!-- <pengpeng.com.newsframe.MatrixImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        />-->
+    <pengpeng.com.newsframe.MultiCircleView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
-
 </LinearLayout>
