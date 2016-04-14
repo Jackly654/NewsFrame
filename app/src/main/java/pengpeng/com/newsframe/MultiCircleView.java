@@ -160,6 +160,11 @@ public class MultiCircleView extends View
 
 	private void drawTopRightArc(Canvas canvas, float cricleY)
 	{
+		/**
+		 * 在drawTopRight rotate了30度之后再-30度，中线为0右为正
+		 * RectF为扇形的外轮廓矩形
+		 */
+
 		canvas.save();
 		canvas.translate(0, cricleY);
 		canvas.rotate(-30);
@@ -172,6 +177,26 @@ public class MultiCircleView extends View
 		arcPaint.setStyle(Paint.Style.STROKE);
 		arcPaint.setColor(Color.WHITE);
 		canvas.drawArc(oval, -22.5F, -135, false, arcPaint);
+
+		float arcTextRadiu = size * ARC_TEXT_RADIU;
+
+		canvas.save();
+		// 把画布旋转到扇形左端的方向
+		canvas.rotate(-135F / 2F);
+
+    /*
+     * 每隔33.75度角画一次文本
+     */
+		for (float i = 0; i < 5 * 33.75F; i += 33.75F) {
+			canvas.save();
+			canvas.rotate(i);
+
+			canvas.drawText("Aim", 0, -arcTextRadiu, textPaint);
+
+			canvas.restore();
+		}
+
+		canvas.restore();
 
 		canvas.restore();
 	}
