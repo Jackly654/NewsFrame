@@ -27,8 +27,9 @@
         android:layout_height="match_parent"
         android:scaleType="matrix"
         />-->
-    <pengpeng.com.newsframe.LayerView
+    <pengpeng.com.newsframe.FoldView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/main"
         />
 </LinearLayout>

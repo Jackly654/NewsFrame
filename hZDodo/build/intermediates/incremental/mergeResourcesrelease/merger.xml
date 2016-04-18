@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="22.2.1"><source path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\res"/></dataSet><dataSet config="main"><source path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\src\main\res"><file name="scrollbar_vertical_thumb" path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\src\main\res\drawable\scrollbar_vertical_thumb.xml" qualifiers="" type="drawable"/><file name="scrollbar_vertical_track" path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\src\main\res\drawable\scrollbar_vertical_track.xml" qualifiers="" type="drawable"/><file name="zlsu" path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\src\main\res\raw\zlsu" qualifiers="" type="raw"/><file path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\src\main\res\values\styles.xml" qualifiers=""><style name="Dialog_NoTitle">
+       <item name="android:windowNoTitle">true</item>
+       <item name="android:background">@android:color/transparent</item>
+       <item name="android:windowBackground">@android:color/transparent</item>
+    </style><style name="scrollbar_shape_style">
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_vertical_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_vertical_track</item>
+        <item name="android:scrollbarSize">12dp</item>
+        <item name="android:scrollbarFadeDuration">2000</item>
+        <item name="android:scrollbarDefaultDelayBeforeFade">1000</item>
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="TranslucentDecor" parent="@android:style/Theme.Wallpaper.NoTitleBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">#FF0000</item>
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style><style name="NormalDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">true</item>
+        
+    </style></file></source><source path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\build\generated\res\rs\release"/><source path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\build\generated\res\resValues\release"/></dataSet><dataSet config="release"><source path="C:\Users\Administrator\Desktop\NewsFrame\hZDodo\src\release\res"/></dataSet><mergedItems/></merger>

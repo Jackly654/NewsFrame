@@ -8,10 +8,6 @@
     <uses-sdk
         android:minSdkVersion="15" />
 
-    <application
-        android:allowBackup="true"
-        android:label="hzdodojar"
-        android:theme="@style/AppTheme" >
-    </application>
+
 
 </manifest>
